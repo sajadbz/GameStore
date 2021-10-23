@@ -26,19 +26,10 @@ namespace GameStore.Winform.Forms
 
             if (CurrentGameId != 0)
                 LoadGame();
-
-
         }
 
         private void btnAddCart_Click(object sender, EventArgs e)
-        {
-            //Game game = Database.Games.Single(c => c.GameId == CurrentGameId);
-            //Database.AddToCart(new CartDetails()
-            //{
-            //    CartId =1,
-            //    GameId = CurrentGameId,
-            //    Price = game.Price
-            //});
+        {            
             MessageBox.Show($"'game.Name' added to cart.", "Successfuly", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
         private void LoadGame()
@@ -52,13 +43,12 @@ namespace GameStore.Winform.Forms
             txtFreeSpace.Text = game.FreeSpace;
             txtGPU.Text = game.GPU;
             txtPlatform.Text = game.Platform;
-            txtPrice.Text = game.Price.ToString("C");
+            txtPrice.Text = game.Price.ToString();
             txtRAM.Text = game.RAM;
             txtYear.Text = game.Year.ToString();
             txtNote.Text = game.Note;
             pbImage.Image = game.Image;
-            cboGroups.SelectedValue = game.GroupId;
-            //pbImage.Image = Database.GetGameImage(CurrentGameId);
+            cboGroups.SelectedValue = game.GroupId;           
         }
 
         private void btnSave_Click(object sender, EventArgs e)
@@ -81,8 +71,8 @@ namespace GameStore.Winform.Forms
                 });
             }
             else
-            {
-                //_gameService.Edit
+            {                
+                //TODO: _gameService.Edit
             }
 
             DialogResult = DialogResult.OK;

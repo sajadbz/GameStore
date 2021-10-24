@@ -1,4 +1,5 @@
-﻿using GameStore.Domain.Entities.Games;
+﻿using GameStore.Domain.Entities.Carts;
+using GameStore.Domain.Entities.Games;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -10,9 +11,11 @@ namespace GameStore.Data.Context
         public DbSet<Game> Games { get; set; }
         public DbSet<GameRequirement> GameRequirements { get; set; }
         public DbSet<GameGroup> GameGroups { get; set; }
+        public DbSet<Cart> Carts { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
+            // User ID={username}; Password={password};
             optionsBuilder
                 .UseSqlServer(@"Server=.;Database=dbGameStore;Trusted_Connection=True");
         }
@@ -26,7 +29,7 @@ namespace GameStore.Data.Context
                     new GameGroup{Id =2,Title = "Adventure",CreateDate= date},
                     new GameGroup{Id =3,Title = "Racing",CreateDate= date},
 
-                });
+                });            
             base.OnModelCreating(modelBuilder);
         }
     }

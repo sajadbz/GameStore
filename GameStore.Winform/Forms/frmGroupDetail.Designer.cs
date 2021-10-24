@@ -38,34 +38,37 @@ namespace GameStore.Winform.Forms
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(12, 15);
+            this.label1.Location = new System.Drawing.Point(58, 34);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 15);
+            this.label1.Size = new System.Drawing.Size(45, 20);
             this.label1.TabIndex = 0;
             this.label1.Text = "Title :";
             // 
             // txtTitle
             // 
-            this.txtTitle.Location = new System.Drawing.Point(53, 12);
+            this.txtTitle.Location = new System.Drawing.Point(105, 30);
+            this.txtTitle.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.txtTitle.Name = "txtTitle";
-            this.txtTitle.Size = new System.Drawing.Size(174, 23);
+            this.txtTitle.Size = new System.Drawing.Size(198, 27);
             this.txtTitle.TabIndex = 1;
             // 
             // btnCancel
             // 
             this.btnCancel.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.btnCancel.Location = new System.Drawing.Point(12, 41);
+            this.btnCancel.Location = new System.Drawing.Point(58, 69);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnCancel.Name = "btnCancel";
-            this.btnCancel.Size = new System.Drawing.Size(73, 23);
+            this.btnCancel.Size = new System.Drawing.Size(83, 31);
             this.btnCancel.TabIndex = 2;
             this.btnCancel.Text = "Cancel";
             this.btnCancel.UseVisualStyleBackColor = true;
             // 
             // btnSave
             // 
-            this.btnSave.Location = new System.Drawing.Point(91, 41);
+            this.btnSave.Location = new System.Drawing.Point(148, 69);
+            this.btnSave.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.btnSave.Name = "btnSave";
-            this.btnSave.Size = new System.Drawing.Size(136, 23);
+            this.btnSave.Size = new System.Drawing.Size(155, 31);
             this.btnSave.TabIndex = 3;
             this.btnSave.Text = "Add";
             this.btnSave.UseVisualStyleBackColor = true;
@@ -74,16 +77,17 @@ namespace GameStore.Winform.Forms
             // frmGroupDetail
             // 
             this.AcceptButton = this.btnSave;
-            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.CancelButton = this.btnCancel;
-            this.ClientSize = new System.Drawing.Size(239, 76);
+            this.ClientSize = new System.Drawing.Size(368, 180);
             this.ControlBox = false;
             this.Controls.Add(this.btnSave);
             this.Controls.Add(this.btnCancel);
             this.Controls.Add(this.txtTitle);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "frmGroupDetail";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
